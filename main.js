@@ -647,3 +647,134 @@
 // }
 // riddle();
 
+// # Задание 1
+// Дан объект **`numbers`**. Необходимо в консоль вывести все значения больше или равные 3.
+
+// const numbers = {
+// 	keyin1: 1,
+// 	keyin2: 2,
+// 	keyin3: 3,
+// 	keyin4: 4,
+// 	keyin5: 5,
+// 	keyin6: 6,
+// 	keyin7: 7,
+// }
+// const valuesNumbers = Object.values(numbers);
+// const result = valuesNumbers.filter(item => item >= 3);
+// console.log(result);
+ 
+// # Задание 2
+// Выведите в консоль дату в формате 'день - месяц - год'.
+
+// let date = new Date();
+// console.log(date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear());
+
+// # Задание 3
+// Дано 2 массива:
+// Вам необходимо объединить 2 этих массива, чтобы значения первого массива были ключами, а значения второго массива — значениями.
+
+// const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+// const ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
+// const result = {};
+// en.forEach((el, i) => {
+//     result[el] = ru[i];
+// });
+// console.log(result);
+
+// # Задание 4
+// Создайте объект `week`, который будет содержать дни недели (пн — вс). Реализуйте функционал:
+// 1. Пользователь вводит день недели с понедельника по пятницу (включительно), `alert` выдает, что это `будний день`.
+// 2. Если пользователь вводит субботу или воскресенье, то `alert` выдает, что это `выходной день`.
+// 3. Если пользователь вводит цифру от 1 до 7, то alert выдаёт название дня недели (1 — понедельник, 2 — вторник и т. д.). Если введенное число меньше 1 или больше 7, то `alert` выдаёт следующее сообщение: "Я не знаю, что это за день недели".
+
+// const days = () => {
+//     let dayOfWeek = prompt('Введите день недели').toLowerCase();
+//     const week = {
+//         1: 'понедельник', 
+//         2: 'вторник',
+//         3: 'среда',
+//         4: 'четверг', 
+//         5: 'пятница',
+//         6: 'суббота', 
+//         7: 'воскресенье',
+//     }
+//     for (const key in week) {
+//         if (dayOfWeek === key) {
+//             alert(week[key]);
+//         }
+//         if (dayOfWeek === week[key] && key <= 5) {
+//             alert('Это будний день');
+//         }
+//         if (dayOfWeek === week[key] && key > 5) {
+//             alert('Это выходной день');
+//         }
+//     }
+// }
+// days();
+
+// # Задание 5
+// Рассчитайте сумму всех значений данного объекта.
+
+// const numbers = {
+// 	key1: {
+// 		keyin1: 1,
+// 		keyin2: 2,
+// 		keyin3: 3,
+// 	},
+// 	key2: {
+// 		keyin1: 4,
+// 		keyin2: 5,
+// 		keyin3: 6,
+// 	},
+// }
+// const valueskeys1 = Object.values(numbers.key1);
+// const valueskeys2 = Object.values(numbers.key2);
+// const valuesNumbers = [...valueskeys1, ...valueskeys2];
+// const result = valuesNumbers.reduce((a, b) => a  + b);
+// console.log(result);
+
+// # Задание 6
+// Создайте объект 12 месяцев в году:
+// Есть 2 переменные:
+// Результат работы программы должен быть таким:
+// - если `language` присвоить `ru`, а `month` присвоить 1, то `alert` выведет `январь`.
+
+const months = () => {
+    let language = prompt('Введите ru или en');
+    let month = Number(prompt('Введите номер месяца, который вы хотите вывести'));
+    const months = {
+        'ru': [
+            'январь',
+            'февраль',
+            'март',
+            'апрель',
+            'май',
+            'июнь',
+            'июль',
+            'август',
+            'сентябрь',
+            'октябрь',
+            'ноябрь',
+            'декабрь',
+        ],
+        'en': [
+            'january',
+            'february',
+            'march',
+            'april',
+            'may',
+            'june',
+            'july',
+            'august',
+            'september',
+            'october',
+            'november',
+            'december',
+        ],  
+    }
+    let userMonth = months[language][month - 1];
+    if (userMonth !== undefined) {
+        alert(userMonth);
+    }
+}
+months();
