@@ -739,42 +739,42 @@
 // Результат работы программы должен быть таким:
 // - если `language` присвоить `ru`, а `month` присвоить 1, то `alert` выведет `январь`.
 
-const months = () => {
-    let language = prompt('Введите ru или en');
-    let month = Number(prompt('Введите номер месяца, который вы хотите вывести'));
-    const months = {
-        'ru': [
-            'январь',
-            'февраль',
-            'март',
-            'апрель',
-            'май',
-            'июнь',
-            'июль',
-            'август',
-            'сентябрь',
-            'октябрь',
-            'ноябрь',
-            'декабрь',
-        ],
-        'en': [
-            'january',
-            'february',
-            'march',
-            'april',
-            'may',
-            'june',
-            'july',
-            'august',
-            'september',
-            'october',
-            'november',
-            'december',
-        ],  
-    }
-    let userMonth = months[language][month - 1];
-    if (userMonth !== undefined) {
-        alert(userMonth);
-    }
-}
-months();
+// const months = () => {
+//     let language = prompt('Введите ru или en');
+//     let month = Number(prompt('Введите номер месяца, который вы хотите вывести'));
+//     const months = {
+//         'ru': [
+//             'январь',
+//             'февраль',
+//             'март',
+//             'апрель',
+//             'май',
+//             'июнь',
+//             'июль',
+//             'август',
+//             'сентябрь',
+//             'октябрь',
+//             'ноябрь',
+//             'декабрь',
+//         ],
+//         'en': [
+//             'january',
+//             'february',
+//             'march',
+//             'april',
+//             'may',
+//             'june',
+//             'july',
+//             'august',
+//             'september',
+//             'october',
+//             'november',
+//             'december',
+//         ],  
+//     }
+//     let userMonth = months[language][month - 1];
+//     if (userMonth !== undefined) {
+//         alert(userMonth);
+//     }
+// }
+// months();
